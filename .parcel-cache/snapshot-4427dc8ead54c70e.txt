@@ -30,7 +30,7 @@
 107C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\@swc\helpers\esm\_class_check_private_static_access.js133968063730296569 0
 95C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\tar\dist\commonjs\strip-absolute-path.d.ts133968066480300009 0
 92C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\tar\dist\commonjs\make-command.d.ts.map133968066478788925 0
-44C:\Users\MSI PC\Desktop\Projects\Swiggy\dist133968075269678325 1
+44C:\Users\MSI PC\Desktop\Projects\Swiggy\dist133971751420577862 1
 106C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\@parcel\error-overlay\src\components\HydrationDiff.js133968063727299714 0
 97C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\lucide-react\dist\esm\icons\user-plus.js.map133968074243754817 0
 97C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\lucide-react\dist\esm\icons\bell-ring.js.map133968074227974833 0
@@ -214,7 +214,7 @@
 98C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\lucide-react\dist\esm\icons\pencil-off.js.map133968074237928294 0
 73C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\is-extglob\README.md133968063724551785 0
 73C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\nullthrows\README.md133968063726279906 0
-66C:\Users\MSI PC\Desktop\Projects\Swiggy\src\Components\Checkout.js133968065310718264 0
+66C:\Users\MSI PC\Desktop\Projects\Swiggy\src\Components\Checkout.js133971751415359437 0
 96C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\enhanced-resolve\lib\SelfReferencePlugin.js133968066478254166 0
 84C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\caniuse-lite\data\regions\KI.js133968063734304013 0
 88C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\@standard-schema\utils\package.json133968073956496920 0
@@ -274,7 +274,7 @@
 91C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\@swc\helpers\_\_construct\package.json133968063731950479 0
 93C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\lucide-react\dist\esm\icons\instagram.js133968074218608121 0
 61C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\escalade133968063726965016 1
-68C:\Users\MSI PC\Desktop\Projects\Swiggy\src\Components\RestHeader.js133968065310608597 0
+68C:\Users\MSI PC\Desktop\Projects\Swiggy\src\Components\RestHeader.js133971750295395824 0
 101C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\@parcel\transformer-babel\lib\babelErrorUtils.js133968063725886546 0
 94C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\lucide-react\dist\esm\icons\user-cog-2.js133968074225762626 0
 86C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\react-router\dist\development\lib133968064062619686 1
@@ -2680,7 +2680,7 @@
 108C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\react\cjs\react-jsx-runtime.react-server.development.js133968063916413226 0
 114C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\@msgpackr-extract\msgpackr-extract-win32-x64\node.abi115.node133968063726163253 0
 83C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\react\cjs\react.development.js133968063916443243 0
-68C:\Users\MSI PC\Desktop\Projects\Swiggy\dist\Swiggy.61d3354a.css.map133968075268708363 0
+68C:\Users\MSI PC\Desktop\Projects\Swiggy\dist\Swiggy.61d3354a.css.map133971751417650531 0
 93C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\@parcel\codeframe\test\codeframe.test.js133968063728417289 0
 88C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\lucide-react\dist\esm\icons\beer.js133968074211028091 0
 94C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\lucide-react\dist\esm\icons\filter.js.map133968074232531960 0
@@ -2891,7 +2891,7 @@
 121C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\node-gyp-build-optional-packages\node_modules\detect-libc\index.d.ts133968063726615059 0
 99C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\lucide-react\dist\esm\icons\circle-stop.js.map133968074230054595 0
 100C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\caniuse-lite\data\features\css-text-box-trim.js133968063731990483 0
-55C:\Users\MSI PC\Desktop\Projects\Swiggy\dist\index.html133968075268313841 0
+55C:\Users\MSI PC\Desktop\Projects\Swiggy\dist\index.html133971751417370307 0
 73C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\msgpackr\unpack.d.ts133968063729485725 0
 107C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\lucide-react\dist\esm\icons\hard-drive-download.js.map133968074233789718 0
 78C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\@swc\helpers\src\_set.mjs133968063733717469 0
@@ -8746,6 +8746,6 @@
 68C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\.bin\parcel.cmd133968063737229493 0
 68C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\.bin\parcel.ps1133968063737229493 0
 68C:\Users\MSI PC\Desktop\Projects\Swiggy\node_modules\.bin\semver.cmd133968063737229493 0
-63C:\Users\MSI PC\Desktop\Projects\Swiggy\dist\Swiggy.2c54e4d8.js133968075269538360 0
-67C:\Users\MSI PC\Desktop\Projects\Swiggy\dist\Swiggy.2c54e4d8.js.map133968075269648350 0
-64C:\Users\MSI PC\Desktop\Projects\Swiggy\dist\Swiggy.61d3354a.css133968075268666582 0
+63C:\Users\MSI PC\Desktop\Projects\Swiggy\dist\Swiggy.2c54e4d8.js133971751420472429 0
+67C:\Users\MSI PC\Desktop\Projects\Swiggy\dist\Swiggy.2c54e4d8.js.map133971751420564378 0
+64C:\Users\MSI PC\Desktop\Projects\Swiggy\dist\Swiggy.61d3354a.css133971751417620128 0

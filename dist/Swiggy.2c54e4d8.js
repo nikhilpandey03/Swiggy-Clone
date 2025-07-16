@@ -38721,56 +38721,78 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>RestHeader);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRedux = require("react-redux");
-var _reactRouter = require("react-router");
+var _reactRouter = require("react-router"); // ✅ fixed import (use react-router-dom)
 var _s = $RefreshSig$();
 function RestHeader() {
     _s();
     const counter = (0, _reactRedux.useSelector)((state)=>state.cartslice.count);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "container w-[80%] mx-auto py-4 px-8 bg-gray-200 text-5xl flex justify-between items-center",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                    className: "text-orange-600 font-bold",
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
+        className: "w-full bg-white shadow-md sticky top-0 z-50",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "max-w-6xl mx-auto px-6 py-4 flex items-center justify-between",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
+                    to: "/",
+                    className: "text-3xl font-bold text-orange-500 hover:text-orange-600 transition duration-200",
                     children: "Swiggy"
                 }, void 0, false, {
                     fileName: "src/Components/RestHeader.js",
-                    lineNumber: 12,
-                    columnNumber: 17
-                }, this)
-            }, void 0, false, {
-                fileName: "src/Components/RestHeader.js",
-                lineNumber: 11,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
+                    lineNumber: 11,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
                     to: "/Checkout",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: [
-                            "Cart ",
-                            `(${counter})`
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/Components/RestHeader.js",
-                        lineNumber: 16,
-                        columnNumber: 17
-                    }, this)
-                }, void 0, false, {
+                    className: "relative flex items-center gap-2 text-lg font-medium text-gray-700 hover:text-orange-600 transition",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            className: "h-7 w-7",
+                            fill: "none",
+                            viewBox: "0 0 24 24",
+                            stroke: "currentColor",
+                            strokeWidth: 2,
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                strokeLinecap: "round",
+                                strokeLinejoin: "round",
+                                d: "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 6h11a1 1 0 001-1v-1m-6-6V6m0 6v6"
+                            }, void 0, false, {
+                                fileName: "src/Components/RestHeader.js",
+                                lineNumber: 28,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/Components/RestHeader.js",
+                            lineNumber: 20,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            className: "text-xl",
+                            children: [
+                                "Cart (",
+                                counter,
+                                ")"
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/Components/RestHeader.js",
+                            lineNumber: 34,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
                     fileName: "src/Components/RestHeader.js",
-                    lineNumber: 15,
-                    columnNumber: 17
+                    lineNumber: 16,
+                    columnNumber: 9
                 }, this)
-            }, void 0, false, {
-                fileName: "src/Components/RestHeader.js",
-                lineNumber: 14,
-                columnNumber: 13
-            }, this)
-        ]
-    }, void 0, true, {
+            ]
+        }, void 0, true, {
+            fileName: "src/Components/RestHeader.js",
+            lineNumber: 9,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
         fileName: "src/Components/RestHeader.js",
-        lineNumber: 10,
-        columnNumber: 9
+        lineNumber: 8,
+        columnNumber: 5
     }, this);
 }
 _s(RestHeader, "Y7vguJnByGXeD5U4dCX/IxJPE/A=", false, function() {
@@ -38817,19 +38839,187 @@ var _s = $RefreshSig$();
 function Checkout() {
     _s();
     const items = (0, _reactRedux.useSelector)((state)=>state.cartslice.items);
+    const getItemPrice = (item)=>{
+        const rawPrice = item.price ?? item.defaultPrice ?? 0;
+        return rawPrice / 100;
+    };
+    const total = items.reduce((acc, item)=>acc + getItemPrice(item) * item.quantity, 0);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: items.map((value)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "text-5xl",
-                children: value.name
+        className: "max-w-4xl mx-auto mt-10 px-6",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "text-3xl font-bold mb-6 text-center text-orange-600",
+                children: "Your Cart"
             }, void 0, false, {
                 fileName: "src/Components/Checkout.js",
-                lineNumber: 10,
-                columnNumber: 31
-            }, this))
-    }, void 0, false, {
+                lineNumber: 18,
+                columnNumber: 7
+            }, this),
+            items.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "text-center text-xl text-gray-600",
+                children: "Your cart is empty. Add some delicious food \uD83C\uDF54"
+            }, void 0, false, {
+                fileName: "src/Components/Checkout.js",
+                lineNumber: 23,
+                columnNumber: 9
+            }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "space-y-4",
+                        children: items.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex items-center justify-between bg-white p-4 rounded-xl shadow-md",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-start gap-4",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                                src: `https://media-assets.swiggy.com/swiggy/image/upload/${item.imageId}`,
+                                                alt: item.name,
+                                                className: "w-24 h-24 rounded-lg object-cover"
+                                            }, void 0, false, {
+                                                fileName: "src/Components/Checkout.js",
+                                                lineNumber: 35,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                                        className: "text-xl font-semibold",
+                                                        children: item.name
+                                                    }, void 0, false, {
+                                                        fileName: "src/Components/Checkout.js",
+                                                        lineNumber: 41,
+                                                        columnNumber: 21
+                                                    }, this),
+                                                    item.description && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-sm text-gray-500 mt-1 max-w-md leading-snug",
+                                                        children: item.description
+                                                    }, void 0, false, {
+                                                        fileName: "src/Components/Checkout.js",
+                                                        lineNumber: 43,
+                                                        columnNumber: 23
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-green-600 font-bold mt-2",
+                                                        children: [
+                                                            "\u20B9",
+                                                            getItemPrice(item)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "src/Components/Checkout.js",
+                                                        lineNumber: 47,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/Components/Checkout.js",
+                                                lineNumber: 40,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/Components/Checkout.js",
+                                        lineNumber: 34,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex flex-col items-end",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                className: "text-lg text-gray-700",
+                                                children: [
+                                                    "Qty: ",
+                                                    item.quantity
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/Components/Checkout.js",
+                                                lineNumber: 54,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                className: "text-xl font-bold text-orange-600 mt-2",
+                                                children: [
+                                                    "\u20B9",
+                                                    (getItemPrice(item) * item.quantity).toFixed(2)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/Components/Checkout.js",
+                                                lineNumber: 55,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/Components/Checkout.js",
+                                        lineNumber: 53,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, item.id, true, {
+                                fileName: "src/Components/Checkout.js",
+                                lineNumber: 30,
+                                columnNumber: 15
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "src/Components/Checkout.js",
+                        lineNumber: 28,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
+                        className: "my-6 border-t"
+                    }, void 0, false, {
+                        fileName: "src/Components/Checkout.js",
+                        lineNumber: 63,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex justify-between items-center text-xl font-semibold",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                children: "Total:"
+                            }, void 0, false, {
+                                fileName: "src/Components/Checkout.js",
+                                lineNumber: 66,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "text-orange-600",
+                                children: [
+                                    "\u20B9",
+                                    total.toFixed(2)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/Components/Checkout.js",
+                                lineNumber: 67,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/Components/Checkout.js",
+                        lineNumber: 65,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "mt-6 text-center",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            className: "bg-orange-500 text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition duration-300",
+                            children: "Proceed to Checkout"
+                        }, void 0, false, {
+                            fileName: "src/Components/Checkout.js",
+                            lineNumber: 71,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/Components/Checkout.js",
+                        lineNumber: 70,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true)
+        ]
+    }, void 0, true, {
         fileName: "src/Components/Checkout.js",
-        lineNumber: 8,
-        columnNumber: 9
+        lineNumber: 17,
+        columnNumber: 5
     }, this);
 }
 _s(Checkout, "tY2Gvv5VcC5OmHFNMSHq17tjIN8=", false, function() {
